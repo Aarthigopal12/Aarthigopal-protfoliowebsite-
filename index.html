@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarthigopal | Frontend Developer Portfolio</title>
+    <!-- Load Tailwind CSS via CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for professional-looking icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles not easily done with Tailwind */
+        :root {
+            scroll-behavior: smooth;
+        }
+        body {
+            /* Text color adjusted for dark mode */
+            font-family: 'Inter', sans-serif;
+            color: #ccc; 
+        }
+        /* Style the link icons */
+        .icon-link svg {
+            transition: transform 0.2s ease-in-out;
+        }
+        /* Adjusted hover color for visibility on dark background */
+        .icon-link:hover svg {
+            transform: translateY(-2px);
+            color: #60A5FA; /* Light Blue on hover */
+        }
+        /* Custom scrollbar for aesthetics in dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* Dark Gray track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* Medium Gray thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280;
+        }
+    </style>
+</head>
+<!-- Main body background set to dark gray -->
+<body class="bg-gray-900">
+
+    <!-- Header and Navigation -->
+    <!-- Header background set to a contrasting dark gray for separation -->
+    <header class="sticky top-0 z-50 bg-gray-800 shadow-xl">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Name -->
+                <a href="#hero" class="text-2xl font-bold text-white tracking-tight">
+                    Aarthi<span class="text-blue-400">gopal</span>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <!-- Link text color updated for dark background -->
+                <nav class="hidden md:flex space-x-8" id="desktop-menu">
+                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition duration-150 font-medium">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-blue-400 transition duration-150 font-medium">Experience</a>
+                    <a href="#skills" class="text-gray-300 hover:text-blue-400 transition duration-150 font-medium">Skills</a>
+                    <a href="#portfolio" class="text-gray-300 hover:text-blue-400 transition duration-150 font-medium">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-blue-400 transition duration-150 font-medium">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+                    <span id="open-icon" data-lucide="menu" class="h-6 w-6"></span>
+                    <span id="close-icon" data-lucide="x" class="h-6 w-6 hidden"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-gray-800 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">About</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Experience</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Skills</a>
+                <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <!-- Background set to main dark gray -->
+        <section id="hero" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="order-2 md:order-1">
+                        <!-- Accent color brightened slightly for pop -->
+                        <p class="text-lg text-blue-400 font-semibold mb-2">Hello, I'm</p>
+                        <!-- Main text color set to white -->
+                        <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                            Aarthigopal
+                        </h1>
+                        <!-- Secondary text color set to light gray -->
+                        <h2 class="text-2xl md:text-3xl font-light text-gray-300 mb-8">
+                            An <span class="font-medium text-blue-400">Aspiring Frontend Developer</span>
+                        </h2>
+                        <!-- Body text color set to medium gray -->
+                        <p class="text-gray-400 mb-8 max-w-lg">
+                            I build clean, responsive, and user-friendly web interfaces, translating design concepts into functional and interactive experiences.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#portfolio" class="px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg hover:bg-blue-700 transition duration-300 shadow-lg shadow-blue-500/50">
+                                View Projects
+                            </a>
+                            <!-- Border and text adjusted for dark background -->
+                            <a href="#contact" class="px-6 py-3 border border-gray-600 text-gray-300 text-lg font-medium rounded-lg hover:bg-gray-700 transition duration-300">
+                                Get in Touch
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image/Avatar -->
+                    <div class="order-1 md:order-2 flex justify-center">
+                        <!-- Image replaced with uploaded file: image_7f596a.png -->
+                        <img src="Aarthig.jpeg"
+                             alt="Professional avatar of Aarthigopal"
+                             class="rounded-full shadow-xl w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-blue-400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Section -->
+        <!-- Background set to slightly lighter dark gray for contrast -->
+        <section id="about" class="py-16 md:py-24 bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-blue-400 mb-2">My Background</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">A Little About Me</h2>
+                </div>
+                <!-- Card background set to a darker gray to stand out from section background -->
+                <div class="max-w-4xl mx-auto bg-gray-900 p-8 md:p-12 rounded-xl shadow-2xl shadow-black/50">
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        I’m an aspiring Front-End Developer with a strong passion for building clean, responsive, and user-friendly websites. While I’m at the beginning of my professional journey, I’ve gained hands-on experience through personal projects, online courses, and consistent practice in HTML, CSS, and JavaScript.
+                    </p>
+                    <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                        I enjoy turning ideas into interactive interfaces and continuously learning modern frameworks like React.js and tools like Git and Figma. I'm looking forward to joining a team where I can grow, contribute, and keep developing both technically and creatively.
+                    </p>
+                    <p class="text-lg font-semibold text-white leading-relaxed">
+                        Eager to contribute, learn from experienced developers, and build impactful web experiences. Let’s connect!
+                    </p>
+                    <div class="mt-8 flex justify-center space-x-6">
+                        <!-- Icons adjusted to gray-400 for visibility -->
+                        <a href="#" class="icon-link" aria-label="LinkedIn Profile">
+                            <span data-lucide="linkedin" class="w-8 h-8 text-gray-400"></span>
+                        </a>
+                        <a href="#" class="icon-link" aria-label="GitHub Profile">
+                            <span data-lucide="github" class="w-8 h-8 text-gray-400"></span>
+                        </a>
+                        <a href="mailto:aarthigopal1998@gmail.com" class="icon-link" aria-label="Email Address">
+                            <span data-lucide="mail" class="w-8 h-8 text-gray-400"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Experience Section -->
+        <section id="experience" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-blue-400 mb-2">Career Journey</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Experience Highlights</h2>
+                </div>
+
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <!-- Zhapix Technologies Block -->
+                    <!-- Card background set to gray-800 -->
+                    <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg shadow-black/50 border-l-4 border-cyan-400">
+                        <h4 class="text-2xl font-bold text-white mb-1">Zhapix Technologies</h4>
+                        <p class="text-sm text-gray-400 mb-4">Chennai, Tamil Nadu, India · On-site | 11 months total</p>
+                        
+                        <!-- Software Engineer -->
+                        <div class="mb-4 pl-4 border-l border-gray-700">
+                            <p class="text-lg font-semibold text-gray-300">Software Engineer (Full-time)</p>
+                            <p class="text-sm text-gray-400">Jul 2025 - Present (5 mos)</p>
+                            <p class="text-sm mt-2 text-gray-400">
+                                Gained practical experience applying front-end skills in a professional setting, utilizing HTML5, CSS, JavaScript, and React in project development.
+                            </p>
+                        </div>
+                        
+                        <!-- Intern -->
+                        <div class="pl-4 border-l border-gray-700">
+                            <p class="text-lg font-semibold text-gray-300">Intern (Internship)</p>
+                            <p class="text-sm text-gray-400">Jan 2025 - Jun 2025 (6 mos)</p>
+                            <p class="text-sm mt-2 text-gray-400">
+                                Developed foundational knowledge and assisted senior developers with basic site components and styling tasks.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Education Placeholder -->
+                    <div class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg shadow-black/50 border-l-4 border-gray-500">
+                        <h4 class="text-2xl font-bold text-white mb-1">A.V.V.M. Sri Pushpam College</h4>
+                        <p class="text-sm text-gray-400">Poondi - 613 503.</p>
+                        <p class="text-lg font-semibold text-gray-300 mt-2">Relevant Degree/Course Placeholder</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. Skills Section -->
+        <section id="skills" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-blue-400 mb-2">Core Competencies</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">My Tech Stack</h2>
+                </div>
+
+                <!-- Adjusted grid layout for 7 skills -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-6 max-w-7xl mx-auto">
+
+                    <!-- Skill Card 1: HTML5 (Orange) -->
+                    <!-- Card background set to gray-800 -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 shadow-black/50">
+                        <span data-lucide="code" class="w-10 h-10 text-orange-400 mb-3"></span>
+                        <h4 class="text-lg font-semibold text-white">HTML5</h4>
+                    </div>
+
+                    <!-- Skill Card 2: CSS3 (Cyan) -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 shadow-black/50">
+                        <span data-lucide="paintbrush" class="w-10 h-10 text-cyan-400 mb-3"></span>
+                        <h4 class="text-lg font-semibold text-white">CSS3</h4>
+                    </div>
+
+                    <!-- Skill Card 3: JavaScript (ES6) (Yellow) -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 shadow-black/50">
+                        <span data-lucide="zap" class="w-10 h-10 text-yellow-400 mb-3"></span>
+                        <h4 class="text-lg font-semibold text-white">JavaScript</h4>
+                    </div>
+                    
+                    <!-- Skill Card 4: Responsive Design (Green/Emerald) -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 shadow-black/50">
+                        <span data-lucide="monitor-dot" class="w-10 h-10 text-emerald-400 mb-3"></span>
+                        <h4 class="text-lg font-semibold text-white">Responsive Design</h4>
+                    </div>
+
+                    <!-- Skill Card 5: React.js (Cyan) -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 shadow-black/50">
+                        <span data-lucide="atom" class="w-10 h-10 text-cyan-400 mb-3"></span>
+                        <h4 class="text-lg font-semibold text-white">Basic React.js</h4>
+                    </div>
+
+                    <!-- Skill Card 6: Git (Red) -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 shadow-black/50">
+                        <span data-lucide="git-branch" class="w-10 h-10 text-red-500 mb-3"></span>
+                        <h4 class="text-lg font-semibold text-white">Git & GitHub</h4>
+                    </div>
+
+                    <!-- Skill Card 7: Figma (UI Design Basics) (Purple) -->
+                    <div class="flex flex-col items-center p-6 bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 shadow-black/50">
+                        <span data-lucide="figma" class="w-10 h-10 text-purple-400 mb-3"></span>
+                        <h4 class="text-lg font-semibold text-white">Figma (UI Basics)</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Portfolio / Projects Section (Featuring only the Dashboard project) -->
+        <!-- Background set to slightly lighter dark gray for contrast -->
+        <section id="portfolio" class="py-16 md:py-24 bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-blue-400 mb-2">My Work</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Featured Project</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Focused on a single project that highlights professional data handling and React development.</p>
+                </div>
+
+                <!-- Projects Container: Centering a single project card -->
+                <div class="max-w-xl mx-auto">
+                    
+                    <!-- Project Card: Employee Management Dashboard -->
+                    <!-- Card background set to gray-900 -->
+                    <div class="bg-gray-900 rounded-xl shadow-xl shadow-black/50 overflow-hidden hover:shadow-2xl transition duration-300 group">
+                        <!-- Placeholder image adjusted for dark theme -->
+                        <img src="https://placehold.co/600x400/1f2937/ffffff?text=Employee+Dashboard"
+                             alt="Employee Dashboard project screenshot"
+                             class="w-full h-64 object-cover transition duration-300 group-hover:scale-[1.02]">
+                        <div class="p-8">
+                            <h4 class="text-2xl font-bold text-white mb-3">Employee Management Dashboard</h4>
+                            <p class="text-gray-400 mb-6 text-base">Developed a responsive internal dashboard to manage employee data (ID, designation, skills) and provide quick access to organizational tools, showcasing **ReactJS** and professional data presentation skills, which is directly applicable to my current role.</p>
+                            <div class="flex flex-wrap gap-2 text-sm font-semibold mb-6">
+                                <!-- Tags colors updated for better visibility on dark background -->
+                                <span class="bg-cyan-900/40 text-cyan-300 px-3 py-1 rounded-full border border-cyan-800">ReactJS</span>
+                                <span class="bg-blue-900/40 text-blue-300 px-3 py-1 rounded-full border border-blue-800">Data Management</span>
+                                <span class="bg-indigo-900/40 text-indigo-300 px-3 py-1 rounded-full border border-indigo-800">UI/UX</span>
+                                <span class="bg-emerald-900/40 text-emerald-300 px-3 py-1 rounded-full border border-emerald-800">Responsive Design</span>
+                            </div>
+                            <div class="flex justify-start space-x-6">
+                                <a href="#" target="_blank" class="text-blue-400 hover:text-blue-200 flex items-center font-medium transition duration-150">
+                                    <span data-lucide="external-link" class="w-5 h-5 mr-1"></span> View Demo
+                                </a>
+                                <a href="#" target="_blank" class="text-gray-400 hover:text-gray-200 flex items-center font-medium transition duration-150">
+                                    <span data-lucide="github" class="w-5 h-5 mr-1"></span> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-blue-400 mb-2">Get In Touch</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Let's Work Together</h2>
+                </div>
+
+                <!-- Form Card background set to gray-800 -->
+                <div class="max-w-3xl mx-auto bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl shadow-black/50 border border-gray-700">
+                    <form id="contact-form" class="space-y-6">
+                        <p id="form-message" class="text-center font-medium hidden rounded-lg p-3"></p>
+
+                        <!-- Name Input -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-700 bg-gray-700 text-white rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                                   placeholder="Your Name">
+                        </div>
+
+                        <!-- Email Input -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" required
+                                   class="mt-1 block w-full px-4 py-2 border border-gray-700 bg-gray-700 text-white rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                                   placeholder="you@example.com">
+                        </div>
+
+                        <!-- Message Textarea -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="mt-1 block w-full px-4 py-2 border border-gray-700 bg-gray-700 text-white rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                                      placeholder="Tell me about your project or opportunity..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="flex justify-center">
+                            <button type="submit"
+                                    class="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300 shadow-xl shadow-blue-500/30">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm mb-4 text-gray-400">&copy; <span id="current-year"></span> Aarthigopal. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150" aria-label="LinkedIn">
+                    <span data-lucide="linkedin" class="w-6 h-6"></span>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-150" aria-label="GitHub">
+                    <span data-lucide="github" class="w-6 h-6"></span>
+                </a>
+                <a href="mailto:aarthigopal1998@gmail.com" class="text-gray-400 hover:text-blue-400 transition duration-150" aria-label="Email">
+                    <span data-lucide="mail" class="w-6 h-6"></span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+
+            // Set current year in the footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // --- 1. Mobile Menu Toggle Logic ---
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('open-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                openIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    openIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                });
+            });
+
+            // --- 2. Contact Form Submission (Placeholder) ---
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Simple form validation (Tailwind's 'required' takes care of basic browser validation)
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (name === '' || email === '' || message === '') {
+                    // Adjusted for dark mode (still red)
+                    formMessage.textContent = 'Please fill out all fields.';
+                    formMessage.className = 'text-center font-medium text-red-300 bg-red-900 rounded-lg p-3 block';
+                    formMessage.classList.remove('hidden');
+                    return;
+                }
+
+                // Simulate form submission success
+                // In a real application, you would send this data to a backend (e.g., Firebase, Formspree, etc.)
+                
+                setTimeout(() => {
+                    // Adjusted for dark mode (still green)
+                    formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+                    formMessage.className = 'text-center font-medium text-emerald-300 bg-emerald-900 rounded-lg p-3 block';
+                    formMessage.classList.remove('hidden');
+                    
+                    contactForm.reset();
+                    
+                    // Hide message after a few seconds
+                    setTimeout(() => {
+                        formMessage.classList.add('hidden');
+                    }, 5000);
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
